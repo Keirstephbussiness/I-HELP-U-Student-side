@@ -186,6 +186,10 @@ body {
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-top: auto;
 }
+.sidebar-footer .nav-link:hover {
+    background-image: linear-gradient(135deg, #ff4500, #ff6347, #ffd700); /* Change to desired hover background color */
+    color: #ffffff;            /* Change to desired hover text color if needed */
+}
 
 .toggle-btn {
     position: absolute;
@@ -219,13 +223,25 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(180deg, var(--mobile-gradient-start), var(--mobile-gradient-end));
+    background: linear-gradient(135deg, #e6f0ff, #f2f6ff);
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(0,0,0,0.05);
     padding: 12px 0 25px;
     z-index: 1000;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
 }
+
+
+/* Bottom Navigation Hover State */
+.mobile-bottom-nav .bottom-nav-item:hover {
+  /* Using a gradient background */
+  background: linear-gradient(135deg, #1E3A8A, #3B82F6); /* navy → vibrant blue */
+  color: #fff;/* Text color on hover */
+}
+
+
+
+
 
 .bottom-nav-items {
     display: flex;
@@ -249,7 +265,6 @@ body {
 
 .bottom-nav-item:hover,
 .bottom-nav-item.active {
-    color: var(--accent-color);
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
@@ -272,12 +287,12 @@ body {
     font-weight: 600;
     text-align: center;
     line-height: 1.2;
-    color: var(--mobile-text-primary);
+    color:navy;
     transition: color 0.3s ease;
 }
 
 .bottom-nav-item.active .bottom-nav-text {
-    color: var(--accent-color);
+    color:Blue;
 }
 
 /* Mobile Overlay Menu */
@@ -285,21 +300,39 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--mobile-gradient-start), var(--mobile-gradient-end));
+    width: 100vw;   /* use viewport width */
+    height: 100vh;  /* use viewport height */
+    background: linear-gradient(135deg, #e6f0ff, #f2f6ff);
     backdrop-filter: blur(20px);
     z-index: 2000;
     display: none;
     animation: fadeIn 0.3s ease;
+    /* Removed scaling completely */
 }
 
+
 .overlay-content {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 40px 30px 100px;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+    .overlay-content {
+        padding: 2rem 1.5rem;
+        height: calc(100vh - env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-content {
+        padding: 1.5rem 1rem;
+    }
+}
+
 
 .overlay-header {
     display: flex;
@@ -353,8 +386,8 @@ body {
 }
 
 .overlay-nav-item:hover {
-    color: var(--accent-color);
-    background: rgba(102, 126, 234, 0.05);
+    color: white;
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
     padding-left: 20px;
 }
 
