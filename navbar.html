@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    
+</head>
+<body>
+
+
+
+
+
+    
+    <!-- Desktop Sidebar -->
+    <nav class="desktop-sidebar sidebar-expanded" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">
+            <span id="toggleIcon">‹</span>
+        </button>
+        
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="/Design asset/Logo-With Name.png" alt="Logo with name" class="logo-with-name">
+                <img src="/Design asset/Logo no name.png" alt="Logo icon only" class="logo-icon-only">
+            </div>
+        </div>
+
+        <div class="sidebar-nav">
+            <div class="nav-item">
+                <a href="Submit-ticket.html" class="nav-link">
+                    <img src="/Design asset/ticket-alt.png" alt="Submit Ticket" class="nav-icon">
+                    <span class="nav-text">Submit Ticket</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Student-Dashboard.html" class="nav-link">
+                    <img src="/Design asset/home.png" alt="Dashboard" class="nav-icon">
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Ncst-Map.html" class="nav-link">
+                    <img src="/Design asset/Map.png" alt="NCST-MAP" class="nav-icon">
+                    <span class="nav-text">NCST-MAP</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Weather-report.html" class="nav-link">
+                    <img src="/Design asset/thunderstorm-risk.png" alt="Weather Report" class="nav-icon">
+                    <span class="nav-text">Weather Report</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Calendar.html" class="nav-link">
+                    <img src="/Design asset/calendar (1).png" alt="Calendar" class="nav-icon">
+                    <span class="nav-text">Calendar - Event</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="Help-desk-message.html" class="nav-link">
+                    <img src="/Design asset/messages-question.png" alt="Help Desk Chat" class="nav-icon">
+                    <span class="nav-text">Help Desk Chat</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="News" class="nav-link">
+                    <img src="/Design asset/rss (1).png" alt="News Feed" class="nav-icon">
+                    <span class="nav-text">News Feed</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="/Design asset/sign-out-alt.png" alt="Logout" class="nav-icon">
+                    <span class="nav-text">Logout</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <div class="bottom-nav-items">
+            <a href="#" class="bottom-nav-item active">
+                <img src="/Design asset/home.png" alt="Dashboard" class="bottom-nav-icon">
+                <div class="bottom-nav-text">Dashboard</div>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <img src="/Design asset/ticket-alt.png" alt="Ticket" class="bottom-nav-icon">
+                <div class="bottom-nav-text">Ticket</div>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <img src="/Design asset/messages-question.png" alt="Chat" class="bottom-nav-icon">
+                <div class="bottom-nav-text">Chat</div>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <img src="/Design asset/rss (1).png" alt="Feed" class="bottom-nav-icon">
+                <div class="bottom-nav-text">Feed</div>
+            </a>
+            <a href="#" class="bottom-nav-item" onclick="openMobileMenu()">
+                <img src="/Design asset/menu-burger.png" alt="Menu" class="bottom-nav-icon">
+                <div class="bottom-nav-text">Menu</div>
+            </a>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="overlay-content">
+            <div class="overlay-header">
+                <img src="/Design asset/Logo-With Name.png" alt="Logo" class="overlay-logo">
+                <button class="overlay-close" onclick="closeMobileMenu()">
+                    <span>×</span>
+                </button>
+            </div>
+            
+            <div class="overlay-nav">
+                <a href="Submit-ticket.html" class="overlay-nav-item">
+                    <img src="/Design asset/ticket-alt.png" alt="Submit Ticket" class="overlay-nav-icon">
+                    <span>Submit Ticket</span>
+                </a>
+                <a href="Student-Dashboard.html" class="overlay-nav-item">
+                    <img src="/Design asset/home.png" alt="Dashboard" class="overlay-nav-icon">
+                    <span>Dashboard</span>
+                </a>
+                <a href="Ncst-Map.html" class="overlay-nav-item">
+                    <img src="/Design asset/Map.png" alt="NCST Map" class="overlay-nav-icon">
+                    <span>NCST Map</span>
+                </a>
+                <a href="Weather-report.html" class="overlay-nav-item">
+                    <img src="/Design asset/thunderstorm-risk.png" alt="Weather" class="overlay-nav-icon">
+                    <span>Weather</span>
+                </a>
+                <a href="Calendar.html" class="overlay-nav-item">
+                    <img src="/Design asset/calendar (1).png" alt="Calendar" class="overlay-nav-icon">
+                    <span>Calendar - Event</span>
+                </a>
+                <a href="Help-desk-message.html" class="overlay-nav-item">
+                    <img src="/Design asset/messages-question.png" alt="Help Desk Chat" class="overlay-nav-icon">
+                    <span>Help Desk Chat</span>
+                </a>
+                <a href="News-Ncst.html" class="overlay-nav-item">
+                    <img src="Design asset/rss (1).png" alt="News Feed" class="overlay-nav-icon">
+                    <span>News Feed</span>
+                </a>
+                <a href="Index.html" class="overlay-nav-item">
+                    <img src="/Design asset/sign-out-alt.png" alt="Logout" class="overlay-nav-icon">
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        let sidebarExpanded = true;
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            sidebarExpanded = !sidebarExpanded;
+            
+            if (sidebarExpanded) {
+                sidebar.classList.remove('sidebar-collapsed');
+                sidebar.classList.add('sidebar-expanded');
+                toggleIcon.textContent = '‹';
+            } else {
+                sidebar.classList.remove('sidebar-expanded');
+                sidebar.classList.add('sidebar-collapsed');
+                toggleIcon.textContent = '›';
+            }
+        }
+
+        function openMobileMenu() {
+            const overlay = document.getElementById('mobileOverlay');
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            const overlay = document.getElementById('mobileOverlay');
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const desktopNavLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+            desktopNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    desktopNavLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const mobileNavLinks = document.querySelectorAll('.bottom-nav-item');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (!this.getAttribute('onclick')) {
+                        e.preventDefault();
+                        mobileNavLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            const overlayNavLinks = document.querySelectorAll('.overlay-nav-item');
+            overlayNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeMobileMenu();
+                });
+            });
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

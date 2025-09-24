@@ -1,0 +1,34 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: linear-gradient(to bottom, #f9f7eb, #f7e989); /* gradient in body */
+      position: relative;
+     font-family: 'Poppins', 'Jersey 25', sans-serif;
+     
+    }
+
+    .top-right{
+      margin: 0;
+      font-weight: normal;
+      font-size: 70px;
+    }
+
+    /* Top-left text */
+    .top-left {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Top-right heading */
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #1a2b4c;
+    }
